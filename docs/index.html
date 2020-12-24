@@ -39,6 +39,10 @@
         }
       },
 
+      formatUpdated: function(time) {
+        return time;
+      } ,
+
       plugins: [
           function(hook, vm) {
             hook.beforeEach(function(html) {
@@ -53,6 +57,9 @@
   </script>
   <!-- Docsify v4 -->
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  <script src="//unpkg.com/raphael"></script>
+  <script src="//unpkg.com/underscore"></script>
+  <script src="//unpkg.com/docsify-sequence-diagram/dist/docsify-sequence-diagram.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-java.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-git.min.js"></script>
