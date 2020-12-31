@@ -51,11 +51,19 @@
 
       plugins: [
           function(hook, vm) {
+            var footer = [
+              '<hr/>',
+              '<footer>',
+              '<span><i>© 2020-2020 www.nitianyi.fun 版权所有 </i></span>',
+              '<span>ICP证：<a href="https://beian.miit.gov.cn" target="_blank" >沪ICP备2020037995号</a></span>',
+              '</footer>'
+            ].join('');
+
             hook.beforeEach(function(html) {
-              return `${html}\n\n----\n\n<br/> <i>© 2020-2020 www.nitianyi.fun 版权所有 </i>ICP证：<a href="https://beian.miit.gov.cn" target="_blank" >沪ICP备2020037995号</a>`;
+              return html;
             }),
               hook.afterEach(function(html) {
-                return html;
+                return html + footer;
               });
           },
         ],
